@@ -16,5 +16,4 @@ position = Vector2( 500, 275 )
 script = ExtResource( 1 )
 noise = SubResource( 1 )
 mat = ExtResource( 2 )
-poly_line = true
 WORM_MAX_SEGMENT_COUNT = 2560.0

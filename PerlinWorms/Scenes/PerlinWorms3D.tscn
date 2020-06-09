@@ -28,7 +28,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.65197 )
 script = ExtResource( 1 )
 noise = SubResource( 1 )
 mat = ExtResource( 3 )
-strip = true
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="Position3D/Worms"]
 multimesh = SubResource( 3 )

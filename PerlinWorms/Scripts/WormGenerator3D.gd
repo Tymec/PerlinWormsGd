@@ -62,9 +62,10 @@ func init_worm(i):
 	return worm
 	
 func remove_worm():
-	worms.remove(worms.size() - 1)
-	worm_meshes[worm_meshes.size() - 1].queue_free()
-	worm_meshes.remove(worm_meshes.size() - 1)
+	if strip:
+		worms.remove(worms.size() - 1)
+		worm_meshes[worm_meshes.size() - 1].queue_free()
+		worm_meshes.remove(worm_meshes.size() - 1)
 	
 func handle_input(delta):
 	# Quit
