@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/WormGenerator2D.gd" type="Script" id=1]
+[ext_resource path="res://Materials/WormSpatialMaterial.tres" type="Material" id=2]
+[ext_resource path="res://Scripts/other/GameManager.gd" type="Script" id=3]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Worms" type="Node2D" parent="."]
+position = Vector2( 500, 275 )
+script = ExtResource( 1 )
+noise = SubResource( 1 )
+mat = ExtResource( 2 )
+poly_line = true
+WORM_MAX_SEGMENT_COUNT = 2560.0

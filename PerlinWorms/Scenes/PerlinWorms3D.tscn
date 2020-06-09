@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/WormGenerator3D.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/other/GameManager.gd" type="Script" id=2]
+[ext_resource path="res://Materials/WormSpatialMaterial.tres" type="Material" id=3]
+[ext_resource path="res://Scripts/other/Camera.gd" type="Script" id=4]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+
+[sub_resource type="MultiMesh" id=3]
+mesh = SubResource( 2 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.967832, 0.251596, 0, -0.251596, 0.967832, 0, 1.43606, 0 )
+script = ExtResource( 4 )
+
+[node name="Position3D" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.65197 )
+
+[node name="Worms" type="Node" parent="Position3D"]
+script = ExtResource( 1 )
+noise = SubResource( 1 )
+mat = ExtResource( 3 )
+strip = true
+
+[node name="MultiMeshInstance" type="MultiMeshInstance" parent="Position3D/Worms"]
+multimesh = SubResource( 3 )

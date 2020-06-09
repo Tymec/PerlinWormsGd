@@ -1,0 +1,16 @@
+[gd_resource type="SpatialMaterial" format=2]
+
+[resource]
+vertex_color_use_as_albedo = true
+params_diffuse_mode = 1
+metallic = 0.13
+metallic_specular = 0.51
+ao_enabled = true
+ao_light_affect = 0.0
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = 1.77
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
